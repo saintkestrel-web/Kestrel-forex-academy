@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Kestrel Forex Academy — learn forex trading foundations, market structure, ICT/SMC concepts, risk management, and trading psychology.">
+  <title>Kestrel Forex Academy | Learn Forex With Structure</title>
+  <style>
+    :root{--bg:#080e19;--panel:#101a2a;--panel2:#142238;--text:#eef4ff;--muted:#a9b8cf;--gold:#f3bd55;--line:#26364d;--green:#54d6a0}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:5;background:rgba(8,14,25,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:850;letter-spacing:.2px;display:flex;align-items:center;gap:10px}.logo{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--gold);color:#101522;font-weight:950}
+    .navlinks{display:flex;gap:20px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:var(--gold)}.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:7px 10px}
+    .hero{padding:76px 0 62px;background:radial-gradient(ellipse at 80% 20%,rgba(243,189,85,.13),transparent 40%),linear-gradient(180deg,#0b1423 0%,var(--bg) 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:44px}.eyebrow{display:inline-block;border:1px solid #5d4b2d;color:var(--gold);background:#241e13;padding:6px 12px;border-radius:99px;font-size:.82rem;font-weight:700}
+    h1{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.06;letter-spacing:-2px;margin:20px 0}h1 span{color:var(--gold)}.lead{font-size:1.12rem;color:var(--muted);max-width:610px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:10px;padding:12px 18px;font-weight:800;border:1px solid var(--line)}.primary{background:var(--gold);color:#101522;border-color:var(--gold)}.secondary{background:transparent}.btn:hover{transform:translateY(-1px)}
+    .chart-card{border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#142238,#0d1727);padding:22px;box-shadow:0 25px 70px #0004}.chart-head{display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem}.chart{height:190px;display:flex;align-items:center;gap:8px;padding:15px 0;border-bottom:1px solid var(--line);overflow:hidden}.candle{width:15px;position:relative;border-radius:2px;background:var(--green);flex-shrink:0}.candle:before{content:"";position:absolute;width:2px;height:calc(100% + 24px);background:inherit;left:6px;top:-12px}.candle.down{background:#ff6e7a}.c1{height:34px;margin-top:52px}.c2{height:55px;margin-top:10px}.c3{height:27px;margin-top:70px}.c4{height:70px;margin-top:-25px}.c5{height:42px;margin-top:26px}.c6{height:88px;margin-top:-34px}.c7{height:60px;margin-top:-8px}.c8{height:95px;margin-top:-42px}.c9{height:47px;margin-top:8px}.c10{height:78px;margin-top:-22px}.c11{height:105px;margin-top:-45px}.c12{height:62px;margin-top:-10px}.chart-foot{display:flex;justify-content:space-between;padding-top:14px;font-size:.85rem;color:var(--muted)}.chart-foot strong{color:var(--green)}
+    section{padding:64px 0}.section-head{max-width:680px;margin-bottom:28px}.section-head h2{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.8px;margin:0 0 10px}.section-head p{margin:0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.2s}.card:hover{border-color:#7e673e;transform:translateY(-3px)}.icon{font-size:1.7rem}.card h3{margin:10px 0 6px}.card p{color:var(--muted);margin:0 0 16px}.tag{display:inline-block;color:var(--gold);font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.7px}.text-link{color:var(--gold);font-weight:800}
+    .path{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:step}.step{padding:20px;border-left:2px solid var(--gold);background:#0d1727;border-radius:0 12px 12px 0}.step b{display:block;color:var(--gold);font-size:.8rem;margin-bottom:7px}.step h3{margin:0 0 6px}.step p{margin:0;color:var(--muted);font-size:.93rem}
+    .risk{background:linear-gradient(120deg,#18263a,#101a2a);border:1px solid var(--line);border-radius:18px;padding:26px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.risk p{color:var(--muted);margin:5px 0 0}.risk strong{color:var(--gold)}
+    .faq details{border-bottom:1px solid var(--line);padding:16px 0}.faq summary{font-weight:750;cursor:pointer}.faq details p{color:var(--muted);margin-bottom:0}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem}.footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.disclaimer{font-size:.82rem;max-width:780px;margin-top:10px}
+    @media(max-width:800px){.hero-grid{grid-template-columns:1fr}.chart-card{max-width:520px}.grid{grid-template-columns:repeat(2,1fr)}.path{grid-template-columns:repeat(2,1fr)}.navlinks{display:none;position:absolute;top:70px;left:0;right:0;padding:18px 4%;background:var(--panel);border-bottom:1px solid var(--line);flex-direction:column}.navlinks.open{display:flex}.menu{display:block}}
+    @media(max-width:520px){.hero{padding:54px 0 42px}h1{letter-spacing:-1.3px}.grid,.path{grid-template-columns:1fr}.risk{grid-template-columns:1fr}.chart-card{padding:16px}.brand{font-size:.91rem}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#home"><span class="logo">K</span><span>Kestrel Forex Academy</span></a>
+      <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">Menu ☰</button>
+      <div class="navlinks" id="navlinks">
+        <a href="#courses">Lessons</a><a href="#path">Learning path</a><a href="#risk">Risk management</a><a href="#about">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">LEARN • PRACTISE • IMPROVE</span>
+        <h1>Trade with <span>knowledge.</span><br>Not guesswork.</h1>
+        <p class="lead">A beginner-friendly home for forex education, market structure, ICT/SMC concepts, risk management, and trading discipline.</p>
+        <div class="actions"><a class="btn primary" href="#courses">Explore lessons →</a><a class="btn secondary" href="#path">See learning path</a></div>
+      </div>
+      <div class="chart-card" aria-label="Illustrative candlestick chart">
+        <div class="chart-head"><span>MARKET STRUCTURE</span><span>ILLUSTRATION</span></div>
+        <div class="chart">
+          <i class="candle c1 down"></i><i class="candle c2"></i><i class="candle c3 down"></i><i class="candle c4"></i><i class="candle c5 down"></i><i class="candle c6"></i><i class="candle c7 down"></i><i class="candle c8"></i><i class="candle c9 down"></i><i class="candle c10"></i><i class="candle c11"></i><i class="candle c12 down"></i>
+        </div>
+        <div class="chart-foot"><span>Learn to read price action</span><strong>EDUCATION FIRST</strong></div>
+      </div>
+    </div>
+  </section>
+  <section id="courses">
+    <div class="wrap">
+      <div class="section-head"><span class="tag">The library</span><h2>Build your trading foundation</h2><p>Start with the basics, then move into chart reading and structured trading concepts. Select a topic to reveal a short introduction.</p></div>
+      <div class="grid">
+        <article class="card"><div class="icon">📘</div><span class="tag">Level 01</span><h3>Forex Fundamentals</h3><p>Understand currency pairs, pips, lots, spread, leverage, and margin.</p><details><summary>Preview lesson</summary><p>A currency pair compares two currencies. In EUR/USD, EUR is the base currency and USD is the quote currency. Learn position size and pip value before risking money.</p></details></article>
+        <article class="card"><div class="icon">🕯️</div><span class="tag">Level 02</span><h3>Candlesticks & Structure</h3><p>Learn candle anatomy, swing highs and lows, trends, BOS, and CHoCH.</p><details><summary>Preview lesson</summary><p>Start by marking clear swing points. An uptrend generally forms higher highs and higher lows; a downtrend generally forms lower highs and lower lows. Context matters.</p></details></article>
+        <article class="card"><div class="icon">🎯</div><span class="tag">Level 03</span><h3>ICT & Smart Money Concepts</h3><p>Study liquidity, fair value gaps, order blocks, displacement, and mitigation.</p><details><summary>Preview lesson</summary><p>These are ways traders interpret price action, not guarantees of future movement. Define each concept consistently and test your rules on historical charts.</p></details></article>
+        <article class="card"><div class="icon">🛡️</div><span class="tag">Essential</span><h3>Risk Management</h3><p>Plan risk per trade, position size, Stop Loss, Take Profit, and risk-to-reward.</p><details><summary>Preview lesson</summary><p>Choose the amount you can afford to lose before entering. A Stop Loss does not guarantee the exact exit price during gaps or fast markets.</p></details></article>
+        <article class="card"><div class="icon">🧠</div><span class="tag">Mindset</span><h3>Trading Psychology</h3><p>Build patience, consistency, and a process for reviewing mistakes.</p><details><summary>Preview lesson</summary><p>Use a journal to record the setup, entry reason, risk, result, and whether you followed your rules. Review decisions, not only profits and losses.</p></details></article>
+        <article class="card"><div class="icon">📝</div><span class="tag">Practice</span><h3>Backtesting & Journaling</h3><p>Turn ideas into rules and evaluate them before risking real funds.</p><details><summary>Preview lesson</summary><p>Write objective entry and exit rules, test a meaningful sample of trades, include costs, and avoid changing the rules after every loss.</p></details></article>
+      </div>
+    </div>
+  </section>
+  <section id="path">
+    <div class="wrap">
+      <div class="section-head"><span class="tag">Your roadmap</span><h2>Learn in the right order</h2><p>Do not rush into advanced setups before you understand the basics.</p></div>
+      <div class="path">
+        <div class="step"><b>STEP 01</b><h3>Understand forex</h3><p>Pairs, pips, lots, spread, leverage, and margin.</p></div>
+        <div class="step"><b>STEP 02</b><h3>Read the chart</h3><p>Candles, swing points, trend, and market structure.</p></div>
+        <div class="step"><b>STEP 03</b><h3>Build a setup</h3><p>Define context, entry confirmation, invalidation, and target.</p></div>
+        <div class="step"><b>STEP 04</b><h3>Test & review</h3><p>Backtest, journal, and practise on a demo account.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="risk">
+    <div class="wrap">
+      <div class="risk">
+        <div><span class="tag">A rule worth keeping</span><h2 style="margin:6px 0 0">Protect your capital first.</h2><p>Forex trading carries substantial risk. Education can help you make informed decisions, but it cannot guarantee profits. Practise on demo before trading live.</p></div>
+        <a class="btn primary" href="#courses">Start learning</a>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head"><span class="tag">About the academy</span><h2>Clear lessons. Structured learning.</h2><p>Kestrel Forex Academy is designed to make forex concepts easier to understand, one step at a time. This starter website is an educational project and does not provide personalised financial advice or guaranteed signals.</p></div>
+      <div class="faq">
+        <details><summary>Is this website free to use?</summary><p>This starter site is free to publish using a free static hosting service. Optional services, a custom domain, or future advanced features may cost money.</p></details>
+        <details><summary>Should beginners trade with real money immediately?</summary><p>No. Learn the basics, practise on a demo account, and understand the risks before considering live trading.</p></details>
+        <details><summary>Does a trading setup guarantee a win?</summary><p>No. Every trading method can lose. Risk management and testing are essential.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footrow"><strong>© <span id="year"></span> Kestrel Forex Academy</strong><span>Learn with patience. Trade with a plan.</span></div>
+    <p class="disclaimer">Educational content only; not financial advice. Forex and leveraged trading involve significant risk and may not be suitable for everyone. Past performance does not guarantee future results.</p>
+  </div>
+</footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn');
+  const navlinks=document.getElementById('navlinks');
+  menuBtn.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+  navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
