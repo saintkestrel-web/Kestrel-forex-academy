@@ -1406,5 +1406,118 @@ kestrelLessons[5].content = `
 `;
 
   </script>
+  <script>
+(function () {
+  const lessonsArea = document.querySelector("#lessons .features");
+  const lessonPanel = document.querySelector(".kestrel-lesson-panel");
+
+  if (!lessonsArea || !lessonPanel) {
+    alert("Please check that the existing lessons section is present.");
+    return;
+  }
+
+  const card = document.createElement("article");
+  card.className = "card";
+  card.tabIndex = 0;
+  card.style.cursor = "pointer";
+
+  card.innerHTML = `
+    <h3>Forex Fundamentals</h3>
+    <p>Learn forex, currency pairs, bid and ask prices, spreads, pips, lots, leverage and margin.</p>
+    <p><strong>Open Lesson →</strong></p>
+  `;
+
+  const lessonContent = `
+    <h2>Forex Fundamentals</h2>
+
+    <h3>1. What Is Forex?</h3>
+    <p>Forex means foreign exchange. It is the market where one currency is exchanged for another. Traders aim to profit from changes in exchange rates.</p>
+
+    <h3>2. Understanding Currency Pairs</h3>
+    <p>A currency pair shows the value of one currency compared with another. For example, EUR/USD compares the euro with the US dollar.</p>
+    <ul>
+      <li><strong>Base currency:</strong> The first currency in the pair. In EUR/USD, it is EUR.</li>
+      <li><strong>Quote currency:</strong> The second currency. In EUR/USD, it is USD.</li>
+      <li><strong>Major pairs:</strong> Pairs that include the US dollar, such as EUR/USD, GBP/USD and USD/JPY.</li>
+      <li><strong>Minor pairs:</strong> Pairs involving major currencies but excluding the US dollar, such as EUR/GBP.</li>
+      <li><strong>Exotic pairs:</strong> A major currency paired with a less frequently traded currency, such as USD/NGN.</li>
+    </ul>
+
+    <h3>3. Bid and Ask Prices</h3>
+    <p>The <strong>bid price</strong> is the price at which your broker is willing to buy the base currency from you. It is generally the price at which you can sell.</p>
+    <p>The <strong>ask price</strong> is the price at which your broker is willing to sell the base currency to you. It is generally the price at which you can buy.</p>
+    <p><strong>Example:</strong> EUR/USD shows:</p>
+    <ul>
+      <li>Bid: 1.1000</li>
+      <li>Ask: 1.1002</li>
+    </ul>
+    <p>If you sell immediately, you generally sell at 1.1000. If you buy immediately, you generally buy at 1.1002.</p>
+
+    <h3>4. What Is the Spread?</h3>
+    <p>The spread is the difference between the ask price and the bid price.</p>
+    <p><strong>Formula:</strong> Spread = Ask − Bid.</p>
+    <p>Using the example above:</p>
+    <p>1.1002 − 1.1000 = 0.0002, which is 2 pips for this standard EUR/USD quote.</p>
+    <p>The spread is a trading cost. A wider spread means you generally start further from breakeven. Spreads can change with market conditions and broker pricing.</p>
+
+    <h3>5. What Is a Pip?</h3>
+    <p>A pip is a standard unit used to measure price movement in forex.</p>
+    <ul>
+      <li>For most pairs, such as EUR/USD, one pip is 0.0001.</li>
+      <li>For most JPY pairs, one pip is 0.01.</li>
+    </ul>
+    <p>Some platforms display an extra decimal digit called a pipette. Always check the symbol's quote format.</p>
+
+    <h3>6. What Is a Lot?</h3>
+    <p>A lot measures trade size. For many standard forex contracts:</p>
+    <ul>
+      <li>1.00 lot = 100,000 units of the base currency.</li>
+      <li>0.10 lot = 10,000 units.</li>
+      <li>0.01 lot = 1,000 units.</li>
+    </ul>
+    <p>Contract sizes can differ for some instruments, so check your broker's specifications.</p>
+
+    <h3>7. Leverage and Margin</h3>
+    <p><strong>Leverage</strong> allows you to control a larger position with less of your own money. <strong>Margin</strong> is the money set aside as collateral to open and maintain that position.</p>
+    <p>Leverage can magnify losses as well as gains. Margin is not the same as the amount you risk on a trade.</p>
+
+    <h3>8. Before You Trade</h3>
+    <ul>
+      <li>Identify the currency pair.</li>
+      <li>Check the bid, ask and current spread.</li>
+      <li>Calculate your stop-loss and position size.</li>
+      <li>Know the amount you could lose before entering.</li>
+      <li>Remember that spreads may widen during news or low-liquidity periods.</li>
+    </ul>
+
+    <p><strong>Key lesson:</strong> When you buy, you generally enter at the ask price. When you sell, you generally enter at the bid price. The spread is the difference between them.</p>
+
+    <button type="button" id="fundamentalsBack">Back to Lessons</button>
+  `;
+
+  function openFundamentals() {
+    lessonPanel.innerHTML = lessonContent;
+    lessonPanel.style.display = "block";
+    lessonPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    document.getElementById("fundamentalsBack").addEventListener("click", function () {
+      document.getElementById("lessons").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  }
+
+  card.addEventListener("click", openFundamentals);
+  card.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openFundamentals();
+    }
+  });
+
+  lessonsArea.insertBefore(card, lessonsArea.firstChild);
+})();
+  </script>
 </body>
 </html>
