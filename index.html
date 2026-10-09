@@ -1519,5 +1519,74 @@ kestrelLessons[5].content = `
   lessonsArea.insertBefore(card, lessonsArea.firstChild);
 })();
   </script>
+  <!-- KESTREL LIVE TRADING CHART -->
+<section id="live-chart" style="
+  background:#07111f;
+  color:#ffffff;
+  padding:28px 14px;
+  margin:30px auto;
+  max-width:1200px;
+  border-radius:16px;
+  font-family:Arial,sans-serif;
+">
+  <div style="max-width:1100px;margin:auto;">
+    <p style="color:#d4af37;font-size:12px;letter-spacing:2px;">
+      KESTREL FOREX ACADEMY
+    </p>
+
+    <h2 style="font-size:28px;margin:8px 0;">
+      Live Market Charts
+    </h2>
+
+    <p style="color:#b9c4d3;line-height:1.6;">
+      Analyse gold and forex pairs using interactive candlestick charts.
+      Change the symbol and timeframe using the chart controls.
+    </p>
+
+    <div style="
+      background:#0c192a;
+      border:1px solid #26364b;
+      border-radius:12px;
+      padding:8px;
+      overflow:hidden;
+    ">
+      <div class="tradingview-widget-container"
+           style="height:550px;width:100%;">
+        <div class="tradingview-widget-container__widget"
+             style="height:calc(100% - 32px);width:100%;">
+        </div>
+
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
+          async>
+          {
+            "autosize": true,
+            "symbol": "OANDA:XAUUSD",
+            "interval": "60",
+            "timezone": "Africa/Lagos",
+            "theme": "dark",
+            "style": "1",
+            "locale": "en",
+            "allow_symbol_change": true,
+            "calendar": false,
+            "support_host": "https://www.tradingview.com"
+          }
+        </script>
+      </div>
+    </div>
+
+    <p style="
+      color:#9eacbf;
+      font-size:12px;
+      line-height:1.6;
+      margin-top:12px;
+    ">
+      Charts provided by TradingView. Prices and availability depend on
+      the selected market and data provider.
+    </p>
+  </div>
+</section>
+<!-- END KESTREL LIVE TRADING CHART -->
 </body>
 </html>
