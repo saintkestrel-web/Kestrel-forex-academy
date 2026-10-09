@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="90" fill="#07111f"/>
+  <rect x="20" y="20" width="472" height="472" rx="75" fill="#0b1b2e" stroke="#c99b3b" stroke-width="4"/>  <g stroke-linecap="round" stroke-width="10">
+    <path d="M100 100 V210" stroke="#20c997"/>
+    <rect x="87" y="130" width="26" height="55" rx="3" fill="#20c997"/><path d="M165 85 V195" stroke="#ef5350"/>
+<rect x="152" y="110" width="26" height="60" rx="3" fill="#ef5350"/>
+
+<path d="M230 65 V175" stroke="#20c997"/>
+<rect x="217" y="95" width="26" height="55" rx="3" fill="#20c997"/>
+
+<path d="M295 80 V190" stroke="#ef5350"/>
+<rect x="282" y="105" width="26" height="60" rx="3" fill="#ef5350"/>
+
+<path d="M360 55 V165" stroke="#20c997"/>
+<rect x="347" y="80" width="26" height="60" rx="3" fill="#20c997"/>
+
+<path d="M425 65 V150" stroke="#20c997"/>
+<rect x="412" y="85" width="26" height="45" rx="3" fill="#20c997"/>
+
+  </g><text x="256" y="300" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="900" fill="#f4c45e">KESTREL</text>
+<text x="256" y="390" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="94" font-weight="900" fill="#f4c45e">FX</text>
+
+  <path d="M120 420 H392" stroke="#c99b3b" stroke-width="4" stroke-linecap="round"/>
+</svg>
