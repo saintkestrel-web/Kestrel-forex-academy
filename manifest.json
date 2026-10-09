@@ -1,1 +1,10 @@
 
+{
+  "name": "Kestrel FX",
+  "short_name": "Kestrel FX",
+  "description": "Kestrel FX - Forex Trading and Education",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f"
+}
