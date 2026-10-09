@@ -1501,11 +1501,13 @@ kestrelLessons[5].content = `
     lessonPanel.scrollIntoView({ behavior: "smooth", block: "start" });
 
     document.getElementById("fundamentalsBack").addEventListener("click", function () {
-      document.getElementById("lessons").scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    });
+  lessonPanel.style.display = "none";
+  lessonPanel.innerHTML = "";
+  document.getElementById("lessons").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+});
   }
 
   card.addEventListener("click", openFundamentals);
