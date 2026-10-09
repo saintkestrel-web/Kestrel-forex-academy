@@ -1406,6 +1406,886 @@ kestrelLessons[5].content = `
 `;
 
   </script>
+  <!-- KESTREL FOREX ACADEMY — FUNDAMENTALS -->
+<style>
+  #kfa-fundamentals,
+  #kfa-fundamentals * {
+    box-sizing: border-box;
+  }
+
+  #kfa-fundamentals {
+    width: 100%;
+    color: #eaf0f8;
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+  }
+
+  #kfa-fundamentals .kfa-fund-icon {
+    width: 100%;
+    max-width: 300px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 22px;
+    border: 1px solid #d6ad55;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #142238, #091321);
+    color: #f0c66b;
+    cursor: pointer;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 auto;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  #kfa-fundamentals .kfa-fund-icon:active {
+    transform: scale(0.98);
+  }
+
+  #kfa-fundamentals .kfa-icon-symbol {
+    font-size: 42px;
+    line-height: 1;
+  }
+
+  #kfa-fundamentals .kfa-subtitle {
+    color: #aab8cc;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  #kfa-fundamentals .kfa-panel[hidden] {
+    display: none !important;
+  }
+
+  #kfa-fundamentals .kfa-panel {
+    margin-top: 20px;
+    padding: 18px;
+    border: 1px solid #253951;
+    border-radius: 16px;
+    background: #0b1626;
+    width: 100%;
+  }
+
+  #kfa-fundamentals .kfa-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  #kfa-fundamentals .kfa-header h2 {
+    color: #f0c66b;
+    font-size: 23px;
+    margin: 0 0 8px;
+  }
+
+  #kfa-fundamentals .kfa-header p {
+    color: #aab8cc;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  #kfa-fundamentals .kfa-close {
+    flex-shrink: 0;
+    background: #18283d;
+    color: #fff;
+    border: 1px solid #40516a;
+    border-radius: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  #kfa-fundamentals .kfa-progress {
+    background: #142238;
+    color: #d6ad55;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  #kfa-fundamentals details {
+    border: 1px solid #263950;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: #101e31;
+    overflow: hidden;
+  }
+
+  #kfa-fundamentals summary {
+    cursor: pointer;
+    padding: 15px 13px;
+    color: #f0c66b;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  #kfa-fundamentals summary::marker {
+    color: #d6ad55;
+  }
+
+  #kfa-fundamentals .kfa-lesson-body {
+    padding: 0 14px 16px;
+    color: #d2dceb;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  #kfa-fundamentals .kfa-lesson-body h4 {
+    color: #f0c66b;
+    margin: 16px 0 6px;
+  }
+
+  #kfa-fundamentals .kfa-lesson-body p {
+    margin: 8px 0;
+  }
+
+  #kfa-fundamentals .kfa-lesson-body ul {
+    padding-left: 21px;
+  }
+
+  #kfa-fundamentals .kfa-example {
+    background: #17283d;
+    border-left: 3px solid #d6ad55;
+    border-radius: 5px;
+    padding: 10px 12px;
+    margin: 12px 0;
+  }
+
+  #kfa-fundamentals .kfa-note {
+    color: #aab8cc;
+    font-size: 12px;
+  }
+
+  #kfa-fundamentals .kfa-bottom {
+    color: #aab8cc;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 480px) {
+    #kfa-fundamentals .kfa-panel {
+      padding: 12px;
+    }
+
+    #kfa-fundamentals .kfa-header h2 {
+      font-size: 20px;
+    }
+
+    #kfa-fundamentals .kfa-lesson-body {
+      font-size: 13px;
+    }
+  }
+</style>
+
+<section id="kfa-fundamentals">
+
+  <!-- FUNDAMENTALS ICON -->
+  <button
+    type="button"
+    class="kfa-fund-icon"
+    id="kfa-fund-open"
+    aria-expanded="false"
+    aria-controls="kfa-fund-panel"
+  >
+    <span class="kfa-icon-symbol" aria-hidden="true">📘</span>
+    <span>Forex Fundamentals</span>
+    <span class="kfa-subtitle">
+      Learn Forex from the beginning
+    </span>
+  </button>
+
+  <!-- FUNDAMENTALS LESSON PANEL -->
+  <div
+    class="kfa-panel"
+    id="kfa-fund-panel"
+    hidden
+  >
+
+    <div class="kfa-header">
+      <div>
+        <h2>Forex Fundamentals</h2>
+        <p>
+          Welcome to your Forex learning centre.
+          Study each lesson in order, understand the examples,
+          and practise before moving to the next topic.
+        </p>
+      </div>
+
+      <button
+        type="button"
+        class="kfa-close"
+        id="kfa-fund-close"
+      >
+        ✕ Close
+      </button>
+    </div>
+
+    <div class="kfa-progress">
+      16 beginner lessons · Start with Lesson 1 and progress step by step.
+    </div>
+
+    <!-- LESSON 1 -->
+    <details>
+      <summary>Lesson 1: Introduction to Forex</summary>
+      <div class="kfa-lesson-body">
+        <h4>What is Forex?</h4>
+        <p>
+          Forex means foreign exchange. It is the market where one
+          currency is exchanged for another. Traders buy or sell
+          currency pairs based on changes in their exchange rates.
+        </p>
+
+        <div class="kfa-example">
+          <strong>Example:</strong><br>
+          EUR/USD = 1.1000 means one euro is worth 1.10 US dollars.
+        </div>
+
+        <h4>How does Forex trading work?</h4>
+        <p>
+          If you buy EUR/USD, you are buying euros and selling US
+          dollars. If the price rises, your position can make a
+          profit. If it falls, your position can lose money.
+        </p>
+
+        <p>
+          If you sell EUR/USD, you are selling euros and buying
+          US dollars. A falling price can benefit your position.
+        </p>
+
+        <h4>Important facts</h4>
+        <ul>
+          <li>Forex is traded in currency pairs.</li>
+          <li>Prices change because of supply, demand and economic events.</li>
+          <li>Leverage can increase both profits and losses.</li>
+          <li>Trading does not guarantee profits.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- LESSON 2 -->
+    <details>
+      <summary>Lesson 2: Currency Pairs — Major, Minor and Exotic</summary>
+      <div class="kfa-lesson-body">
+        <h4>What is a currency pair?</h4>
+        <p>
+          A currency pair compares the value of one currency with
+          another. The first currency is the base currency, and the
+          second is the quote currency.
+        </p>
+
+        <h4>Major pairs</h4>
+        <p>
+          Major pairs contain the US dollar and another major currency.
+          They are generally among the most actively traded pairs.
+        </p>
+        <ul>
+          <li>EUR/USD — Euro / US dollar</li>
+          <li>GBP/USD — British pound / US dollar</li>
+          <li>USD/JPY — US dollar / Japanese yen</li>
+          <li>USD/CHF — US dollar / Swiss franc</li>
+          <li>AUD/USD — Australian dollar / US dollar</li>
+          <li>USD/CAD — US dollar / Canadian dollar</li>
+          <li>NZD/USD — New Zealand dollar / US dollar</li>
+        </ul>
+
+        <h4>Minor pairs</h4>
+        <p>
+          Minor pairs combine major currencies without including
+          the US dollar.
+        </p>
+        <ul>
+          <li>EUR/GBP — Euro / British pound</li>
+          <li>EUR/JPY — Euro / Japanese yen</li>
+          <li>GBP/JPY — British pound / Japanese yen</li>
+          <li>AUD/JPY — Australian dollar / Japanese yen</li>
+          <li>EUR/CHF — Euro / Swiss franc</li>
+        </ul>
+
+        <h4>Exotic pairs</h4>
+        <p>
+          Exotic pairs combine a major currency with a currency
+          from a smaller or emerging market.
+        </p>
+        <ul>
+          <li>USD/NGN — US dollar / Nigerian naira</li>
+          <li>USD/TRY — US dollar / Turkish lira</li>
+          <li>USD/ZAR — US dollar / South African rand</li>
+          <li>USD/MXN — US dollar / Mexican peso</li>
+        </ul>
+
+        <div class="kfa-example">
+          <strong>Remember:</strong><br>
+          Exotic pairs often have wider spreads and lower liquidity.
+          The pairs available to you depend on your broker.
+        </div>
+      </div>
+    </details>
+
+    <!-- LESSON 3 -->
+    <details>
+      <summary>Lesson 3: Base Currency and Quote Currency</summary>
+      <div class="kfa-lesson-body">
+        <p>
+          In a currency pair, the base currency is written first.
+          The quote currency is written second.
+        </p>
+
+        <div class="kfa-example">
+          EUR/USD = 1.1000<br><br>
+          Base currency: EUR<br>
+          Quote currency: USD<br>
+          Meaning: 1 EUR = 1.10 USD
+        </div>
+
+        <p>
+          If EUR/USD rises from 1.1000 to 1.1100, the euro has
+          strengthened relative to the dollar.
+        </p>
+
+        <p>
+          If EUR/USD falls from 1.1000 to 1.0900, the euro has
+          weakened relative to the dollar.
+        </p>
+
+        <p>
+          The direction of the pair tells you how the base currency
+          is valued against the quote currency.
+        </p>
+      </div>
+    </details>
+
+    <!-- LESSON 4 -->
+    <details>
+      <summary>Lesson 4: Bid Price and Ask Price</summary>
+      <div class="kfa-lesson-body">
+        <h4>Bid price</h4>
+        <p>
+          The bid is the price at which the market or broker is
+          willing to buy the base currency from you. It is generally
+          the price used to close a standard market-buy position.
+        </p>
+
+        <h4>Ask price</h4>
+        <p>
+          The ask is the price at which the market or broker is
+          willing to sell the base currency to you. It is generally
+          the price used to open a standard market-buy position.
+        </p>
+
+        <div class="kfa-example">
+          EUR/USD<br>
+          Bid: 1.1000<br>
+          Ask: 1.1002
+        </div>
+
+        <p>
+          A market buy normally opens at the ask and closes at the bid.
+          A market sell normally opens at the bid and closes at the ask.
+          This difference contributes to your trading cost.
+        </p>
+      </div>
+    </details>
+
+    <!-- LESSON 5 -->
+    <details>
+      <summary>Lesson 5: Spread and Trading Costs</summary>
+      <div class="kfa-lesson-body">
+        <p>
+          The spread is the difference between the ask price and
+          the bid price.
+        </p>
+
+        <div class="kfa-example">
+          Ask = 1.1002<br>
+          Bid = 1.1000<br>
+          Spread = 0.0002 = 2 pips on this five-digit-style quote.
+        </div>
+
+        <p>
+          A wider spread means a higher initial spread cost for
+          the same position size. Spreads can widen during news,
+          low-liquidity periods and market transitions.
+        </p>
+
+        <h4>Other trading costs</h4>
+        <ul>
+          <li>Commission, where charged.</li>
+          <li>Swap or overnight financing, where applicable.</li>
+          <li>Slippage when execution differs from the requested price.</li>
+        </ul>
+
+        <p>
+          Always check your broker's actual spread and contract
+          specifications before entering a trade.
+        </p>
+      </div>
+    </details>
+
+    <!-- LESSON 6 -->
+    <details>
+      <summary>Lesson 6: Pips, Points and Pipettes</summary>
+      <div class="kfa-lesson-body">
+        <h4>What is a pip?</h4>
+        <p>
+          A pip is a standard unit for measuring price movement
+          in Forex. For most currency pairs, one pip is 0.0001.
+          For many JPY pairs, one pip is 0.01.
+        </p>
+
+        <div class="kfa-example">
+          EUR/USD moves from 1.1000 to 1.1020.<br>
+          Movement = 20 pips.
+        </div>
+
+        <div class="kfa-example">
+          USD/JPY moves from 150.00 to 150.20.<br>
+          Movement = 20 pips.
+        </div>
+
+        <h4>What is a pipette?</h4>
+        <p>
+          On a five-digit EUR/USD quote such as 1.10005, the fifth
+          decimal is a fractional pip, often called a pipette.
+          Ten pipettes equal one pip.
+        </p>
+
+        <h4>What is a point?</h4>
+        <p>
+          The meaning of a point depends on the platform and symbol.
+          On many five-digit Forex quotes, one point is 0.00001,
+          while one pip is 0.0001. Always check the symbol's digits.
+        </p>
+
+        <p>
+          Gold and other CFDs can use different quoting conventions,
+          so do not assume every instrument follows the same pip rule.
+        </p>
+      </div>
+    </details>
+
+    <!-- LESSON 7 -->
+    <details>
+      <summary>Lesson 7: Lot Sizes and Position Volume</summary>
+      <div class="kfa-lesson-body">
+        <p>
+          A lot measures the size of your Forex position.
+          For many standard Forex contracts, the common lot sizes are:
+        </p>
+
+        <ul>
+          <li>Standard lot: 100,000 units of the base currency.</li>
+          <li>Mini lot: 10,000 units.</li>
+          <li>Micro lot: 1,000 units.</li>
+          <li>Nano lot: 100 units, where supported.</li>
+        </ul>
+
+        <div class="kfa-example">
+          1.00 lot = 100,000 units<br>
+          0.10 lot = 10,000 units<br>
+          0.01 lot = 1,000 units
+        </div>
+
+        <h4>How lot size affects risk</h4>
+        <p>
+          For EUR/USD, a standard lot often has a pip value of
+          approximately $10 when the account currency is USD.
+          A 0.10 lot position would then be approximately $1 per pip,
+          and a 0.01 lot position approximately $0.10 per pip.
+        </p>
+
+        <div class="kfa-example">
+          If 0.01 lot moves against you by 20 pips, the loss would
+          be approximately $2 before other costs, under the example
+          above.
+        </div>
+
+        <p>
+          Pip value varies by pair, exchange rate, contract size
+          and account currency. Gold and other CFDs can use
+          different contract specifications.
+        </p>
+      </div>
+    </details>
+
+    <!-- LESSON 8 -->
+    <details>
+      <summary>Lesson 8: Leverage</summary>
+      <div class="kfa-lesson-body">
+        <p>
+          Leverage allows you to control a position larger than
+          the money required as margin.
+        </p>
+
+        <div class="kfa-example">
+          With 1:100 leverage, a position worth $10,000 may require
+          approximately $100 of margin, before adjustments and
+          broker-specific requirements.
+        </div>
+
+        <p>
+          Leverage does not make a trade safer. Your profit and loss
+          depend mainly on position size and price movement.
+        </p>
+
+        <ul>
+          <li>Higher leverage can reduce the margin required.</li>
+          <li>Large positions can produce large losses quickly.</li>
+          <li>Broker leverage limits can change around certain events.</li>
+        </ul>
+
+        <p>
+          Choose your position size based on your acceptable loss,
+          not on the maximum leverage your broker offers.
+        </p>
+      </div>
+    </details>
+
+    <!-- LESSON 9 -->
+    <details>
+      <summary>Lesson 9: Margin and Free Margin</summary>
+      <div class="kfa-lesson-body">
+        <p>
+          Margin is the amount of account funds reserved to support
+          an open position. It is not the same as the amount you
+          intend to risk on your stop loss.
+        </p>
+
+        <ul>
+          <li>Used margin: funds reserved for open positions.</li>
+          <li>Free margin: equity minus used margin.</li>
+          <li>Equity: balance plus or minus floating profit or loss.</li>
+          <li>Margin level: equity divided by used margin, multiplied by 100%.</li>
+        </ul>
+
+        <div class="kfa-example">
+          Equity = $100<br>
+          Used margin = $20<br>
+          Free margin = $80<br>
+          Margin level = 500%
+        </div>
+
+        <p>
+          If losses reduce equity, your margin level can fall.
+          Brokers may issue margin calls or close positions according
+          to their specific margin rules.
+        </p>
+      </div>
+    </details>
+
+    <!-- LESSON 10 -->
+    <details>
+      <summary>Lesson 10: Balance, Equity and Floating Profit</summary>
+      <div class="kfa-lesson-body">
+        <h4>Balance</h4>
+        <p>
+          Balance is your account's result after completed trades,
+          deposits, withdrawals and applicable charges. It does
+          not normally include the unrealized result of open trades.
+        </p>
+
+        <h4>Equity</h4>
+        <p>
+          Equity reflects your balance plus or minus the current
+          floating results of open positions, adjusted for applicable
+          account charges.
+        </p>
+
+        <div class="kfa-example">
+          Balance = $100<br>
+          Floating profit = $5<br>
+          Equity = $105, assuming no other adjustments.
+        </div>
+
+        <p>
+          If the floating result changes to a $5 loss, equity becomes
+          $95 under the same assumptions.
+        </p>
+
+        <p>
+          Remember: an open trade's profit can change before the
+          position is closed.
+        </p>
+      </div>
+    </details>
+
+    <!-- LESSON 11 -->
+    <details>
+      <summary>Lesson 11: Buy Orders and Sell Orders</summary>
+      <div class="kfa-lesson-body">
+        <h4>Buy</h4>
+        <p>
+          A buy position generally benefits when the instrument's
+          price rises after your entry.
+        </p>
+
+        <h4>Sell</h4>
+        <p>
+          A sell position generally benefits when the instrument's
+          price falls after your entry.
+        </p>
+
+        <h4>Common order types</h4>
+        <ul>
+          <li>Market order: requests execution at the available market price.</li>
+          <li>Buy Limit: a pending buy below the current price.</li>
+          <li>Sell Limit: a pending sell above the current price.</li>
+          <li>Buy Stop: a pending buy above the current price.</li>
+          <li>Sell Stop: a pending sell below the current price.</li>
+        </ul>
+
+        <p>
+          Pending-order placement and execution can depend on
+          the broker's rules and market conditions.
+        </p>
+      </div>
+    </details>
+
+    <!-- LESSON 12 -->
+    <details>
+      <summary>Lesson 12: Calculating Profit and Loss</summary>
+      <div class="kfa-lesson-body">
+        <p>
+          Your trading result depends on the price movement, position
+          size, instrument specifications and trading costs.
+        </p>
+
+        <div class="kfa-example">
+          Example: EUR/USD<br>
+          Position: 0.10 lot<br>
+          Approximate pip value: $1<br>
+          Favourable movement: 30 pips<br>
+          Approximate gross profit: $30.
+        </div>
+
+        <p>
+          If the same position moves 30 pips against you, the
+          approximate gross loss would be $30.
+        </p>
+
+        <p>
+          These figures are illustrative. Commission, spread, swap,
+          slippage and changing conversion rates can affect the final
+          result.
+        </p>
+
+        <p>
+          Always confirm the tick size, contract size and tick value
+          for the exact instrument you are trading.
+        </p>
+      </div>
+    </details>
+
+    <!-- LESSON 13 -->
+    <details>
+      <summary>Lesson 13: Stop Loss and Take Profit</summary>
+      <div class="kfa-lesson-body">
+        <h4>Stop Loss (SL)</h4>
+        <p>
+          A stop loss is an order intended to close a position if
+          price reaches a specified level, helping limit losses.
+          Execution can differ from the requested price during gaps
+          or fast markets.
+        </p>
+
+        <h4>Take Profit (TP)</h4>
+        <p>
+          A take profit is an order intended to close a position
+          when price reaches your target.
+        </p>
+
+        <div class="kfa-example">
+          Buy entry: 1.1000<br>
+          Stop loss: 1.0980<br>
+          Take profit: 1.1060<br><br>
+          Potential price risk: 20 pips<br>
+          Potential price reward: 60 pips
+        </div>
+
+        <p>
+          The example has a 1:3 risk-to-reward ratio before costs.
+          A stop loss does not guarantee the exact exit price.
+        </p>
+      </div>
+    </details>
+
+    <!-- LESSON 14 -->
+    <details>
+      <summary>Lesson 14: Risk-to-Reward Ratio</summary>
+      <div class="kfa-lesson-body">
+        <p>
+          Risk-to-reward compares the amount you are prepared to
+          lose with the potential profit you are targeting.
+        </p>
+
+        <div class="kfa-example">
+          1:2 means risking $10 to target $20.<br>
+          1:3 means risking $10 to target $30.
+        </div>
+
+        <h4>How to calculate it</h4>
+        <p>
+          Divide the potential reward by the potential risk.
+          If the stop-loss distance is 20 pips and the target
+          distance is 60 pips, the ratio is 1:3.
+        </p>
+
+        <h4>Risk management rules</h4>
+        <ul>
+          <li>Decide your acceptable loss before entering.</li>
+          <li>Calculate position size from your stop-loss distance.</li>
+          <li>Include costs when evaluating a setup.</li>
+          <li>Do not widen a stop loss simply to avoid taking a loss.</li>
+        </ul>
+
+        <p>
+          A 1:3 setup can still lose. A favourable ratio does not
+          guarantee profitability; your strategy must also perform
+          well over a meaningful number of trades.
+        </p>
+      </div>
+    </details>
+
+    <!-- LESSON 15 -->
+    <details>
+      <summary>Lesson 15: Asian, London and New York Sessions</summary>
+      <div class="kfa-lesson-body">
+        <h4>Asian session</h4>
+        <p>
+          Trading activity often centres on Asian currencies.
+          Some pairs move within narrower ranges, although strong
+          moves can still happen.
+        </p>
+
+        <h4>London session</h4>
+        <p>
+          London is a major Forex trading centre. Activity and
+          volatility can increase when European markets become active.
+        </p>
+
+        <h4>New York session</h4>
+        <p>
+          New York activity can affect the US dollar and other
+          currencies. The overlap with London can be particularly active.
+        </p>
+
+        <div class="kfa-example">
+          Traders often monitor session highs and lows for potential
+          liquidity, breakouts and reversals. These levels are
+          references, not guaranteed trading signals.
+        </div>
+
+        <p>
+          Session behaviour varies by pair, weekday, economic news
+          and market conditions.
+        </p>
+      </div>
+    </details>
+
+    <!-- LESSON 16 -->
+    <details>
+      <summary>Lesson 16: Forex Market Hours and Trading Conditions</summary>
+      <div class="kfa-lesson-body">
+        <p>
+          The global Forex market generally operates 24 hours a day
+          during the working week, across different financial centres.
+          Retail trading hours depend on your broker and instrument.
+        </p>
+
+        <h4>What affects market hours?</h4>
+        <ul>
+          <li>Daylight-saving changes in different countries.</li>
+          <li>Broker server time and scheduled maintenance.</li>
+          <li>Public holidays and reduced liquidity.</li>
+          <li>Weekend closures and market gaps.</li>
+        </ul>
+
+        <h4>Why do prices move?</h4>
+        <p>
+          Prices respond to buying and selling activity, interest-rate
+          expectations, inflation data, employment reports, central-bank
+          decisions and other economic or geopolitical developments.
+        </p>
+
+        <h4>Before trading</h4>
+        <ul>
+          <li>Check your broker's current trading schedule.</li>
+          <li>Check the economic calendar for important releases.</li>
+          <li>Be aware of spread widening and slippage.</li>
+          <li>Avoid trading simply because the market is open.</li>
+        </ul>
+
+        <p>
+          A disciplined trader waits for a suitable setup instead
+          of forcing a trade every day.
+        </p>
+      </div>
+    </details>
+
+    <div class="kfa-bottom">
+      <strong>Kestrel Forex Academy</strong><br>
+      Learn the fundamentals. Practise patiently. Manage your risk.<br>
+      Educational content only — trading involves risk.
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function () {
+  "use strict";
+
+  const root = document.getElementById("kfa-fundamentals");
+
+  if (!root || root.dataset.initialized === "true") {
+    return;
+  }
+
+  root.dataset.initialized = "true";
+
+  const openButton = root.querySelector("#kfa-fund-open");
+  const closeButton = root.querySelector("#kfa-fund-close");
+  const panel = root.querySelector("#kfa-fund-panel");
+
+  function openFundamentals() {
+    panel.hidden = false;
+    openButton.setAttribute("aria-expanded", "true");
+  }
+
+  function closeFundamentals() {
+    panel.hidden = true;
+    openButton.setAttribute("aria-expanded", "false");
+  }
+
+  openButton.addEventListener("click", function () {
+    if (panel.hidden) {
+      openFundamentals();
+    } else {
+      closeFundamentals();
+    }
+  });
+
+  closeButton.addEventListener("click", function () {
+    closeFundamentals();
+
+    openButton.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  });
+})();
+</script>
+<!-- END KESTREL FOREX ACADEMY — FUNDAMENTALS -->
 <!-- KESTREL DEDICATED CHART PAGE -->
 <style>
   #kestrelChartButton {
