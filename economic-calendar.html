@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#07111f">
-
 <title>Kestrel FX | Economic Calendar</title>
 
 <style>
@@ -14,7 +13,7 @@
 
 body {
   margin: 0;
-  padding: 18px 12px;
+  padding: 16px 10px;
   background: #07111f;
   color: #ffffff;
   font-family: Arial, sans-serif;
@@ -27,9 +26,9 @@ body {
 
 .brand {
   color: #36d6ff;
-  font-size: 14px;
   font-weight: bold;
   letter-spacing: 3px;
+  font-size: 13px;
 }
 
 h1 {
@@ -39,304 +38,107 @@ h1 {
 
 .description {
   color: #a8b8ca;
-  font-size: 14px;
   line-height: 1.6;
+  font-size: 14px;
 }
 
-.date-box {
-  margin: 22px 0;
-  padding: 16px;
-  background: #101f32;
+.calendar {
+  margin-top: 20px;
+  width: 100%;
+  min-height: 700px;
+  overflow: hidden;
   border: 1px solid #263b52;
   border-radius: 10px;
+  background: #101f32;
 }
 
-.date-box label {
-  display: block;
-  margin-bottom: 12px;
-  color: #36d6ff;
-  font-weight: bold;
-}
-
-#calendarDate {
+.tradingview-widget-container {
   width: 100%;
-  max-width: 320px;
+}
+
+.tradingview-widget-container__widget {
+  width: 100%;
+}
+
+.tradingview-widget-copyright {
   padding: 12px;
-  background: #07111f;
-  color: white;
-  border: 1px solid #36d6ff;
-  border-radius: 6px;
-  font-size: 15px;
-}
-
-.selected-date {
-  margin-top: 12px;
-  color: #a8b8ca;
-  font-size: 13px;
-}
-
-.table-heading {
-  margin-top: 28px;
-  margin-bottom: 14px;
-  font-size: 18px;
-}
-
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-  border: 1px solid #263b52;
-  border-radius: 10px;
-}
-
-table {
-  width: 100%;
-  min-width: 750px;
-  border-collapse: collapse;
-  background: #101f32;
-}
-
-thead {
-  background: #162b43;
-}
-
-th {
-  padding: 15px 12px;
-  color: #36d6ff;
-  font-size: 13px;
+  font-size: 12px;
   text-align: center;
-  white-space: nowrap;
 }
 
-td {
-  padding: 16px 12px;
-  text-align: center;
-  border-top: 1px solid #263b52;
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-td:first-child {
-  text-align: left;
-  font-weight: bold;
-}
-
-tbody tr:hover {
-  background: #192d43;
-}
-
-.forecast {
-  color: #ffd166;
-}
-
-.actual {
+.tradingview-widget-copyright a,
+.back {
   color: #36d6ff;
-}
-
-.previous {
-  color: #b9c7d8;
-}
-
-.status {
-  margin-top: 16px;
-  padding: 13px;
-  background: #101f32;
-  border-left: 3px solid #36d6ff;
-  border-radius: 5px;
-  color: #a8b8ca;
-  font-size: 13px;
-  line-height: 1.6;
 }
 
 .back {
   display: inline-block;
-  margin-top: 24px;
-  color: #36d6ff;
+  margin-top: 20px;
   text-decoration: none;
-  font-size: 14px;
 }
 
-.back:hover {
-  text-decoration: underline;
-}
-
-footer {
-  margin-top: 25px;
-  color: #73869b;
+.note {
+  margin-top: 16px;
+  color: #a8b8ca;
   font-size: 12px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
   <div class="brand">KESTREL FX</div>
 
-  <h1>🇺🇸 Economic Calendar</h1>
+  <h1>🇺🇸 U.S. Economic Calendar</h1>
 
   <p class="description">
-    Track important U.S. economic announcements that may affect
-    the U.S. dollar and Gold (XAU/USD).
+    View U.S. economic announcements, release times, Actual,
+    Forecast and Previous figures that can affect Gold (XAU/USD).
   </p>
 
-  <div class="date-box">
+  <div class="calendar">
+    <div class="tradingview-widget-container">
 
-    <label for="calendarDate">📅 Select Economic News Date</label>
+      <div class="tradingview-widget-container__widget"></div>
 
-    <input
-      type="date"
-      id="calendarDate"
-    >
+      <div class="tradingview-widget-copyright">
+        <a href="https://www.tradingview.com/economic-calendar/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Economic Calendar
+        </a>
+        by TradingView
+      </div>
 
-    <div class="selected-date">
-      Selected date:
-      <strong id="selectedDate">Loading...</strong>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-events.js"
+        async>
+      {
+        "colorTheme": "dark",
+        "isTransparent": false,
+        "locale": "en",
+        "countryFilter": "us",
+        "importanceFilter": "-1,0,1",
+        "width": "100%",
+        "height": 700
+      }
+      </script>
+
     </div>
-
   </div>
 
-  <h2 class="table-heading">Economic News Reports</h2>
+  <p class="note">
+    Use the calendar's own date and time-zone filters to select
+    the period you want to view. Actual figures appear after
+    release; Forecast and Previous figures may not be available
+    for every event.
+  </p>
 
-  <div class="table-container">
-
-    <table>
-
-      <thead>
-        <tr>
-          <th>News</th>
-          <th>Date</th>
-          <th>Time (WAT)</th>
-          <th>Forecast</th>
-          <th>Actual</th>
-          <th>Previous</th>
-        </tr>
-      </thead>
-
-      <tbody id="calendarTable">
-
-        <tr>
-          <td>CPI</td>
-          <td class="event-date">—</td>
-          <td>—</td>
-          <td class="forecast">—</td>
-          <td class="actual">—</td>
-          <td class="previous">—</td>
-        </tr>
-
-        <tr>
-          <td>Core CPI</td>
-          <td class="event-date">—</td>
-          <td>—</td>
-          <td class="forecast">—</td>
-          <td class="actual">—</td>
-          <td class="previous">—</td>
-        </tr>
-
-        <tr>
-          <td>PPI</td>
-          <td class="event-date">—</td>
-          <td>—</td>
-          <td class="forecast">—</td>
-          <td class="actual">—</td>
-          <td class="previous">—</td>
-        </tr>
-
-        <tr>
-          <td>FOMC Interest Rate</td>
-          <td class="event-date">—</td>
-          <td>—</td>
-          <td class="forecast">—</td>
-          <td class="actual">—</td>
-          <td class="previous">—</td>
-        </tr>
-
-        <tr>
-          <td>Nonfarm Payrolls (NFP)</td>
-          <td class="event-date">—</td>
-          <td>—</td>
-          <td class="forecast">—</td>
-          <td class="actual">—</td>
-          <td class="previous">—</td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-  </div>
-
-  <div class="status">
-    <strong>Data status:</strong>
-    Live economic figures are not connected yet.
-    Dashes mean the information has not been loaded.
-    Forecast, Actual, and Previous will need to be supplied
-    by a reliable economic data source.
-  </div>
-
-  <a class="back" href="index.html">
-    ← Back to Kestrel FX
-  </a>
-
-  <footer>
-    Economic announcements can cause sharp movements in the
-    forex and gold markets. Always check the released figures
-    and market reaction before making trading decisions.
-  </footer>
+  <a class="back" href="index.html">← Back to Kestrel FX</a>
 
 </div>
-
-<script>
-const dateInput = document.getElementById("calendarDate");
-const selectedDate = document.getElementById("selectedDate");
-
-function formatDate(dateString) {
-  if (!dateString) {
-    return "No date selected";
-  }
-
-  const parts = dateString.split("-");
-
-  const date = new Date(
-    Number(parts[0]),
-    Number(parts[1]) - 1,
-    Number(parts[2])
-  );
-
-  return date.toLocaleDateString("en-GB", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric"
-  });
-}
-
-function updateSelectedDate() {
-  selectedDate.textContent = formatDate(dateInput.value);
-}
-
-function getToday() {
-  const now = new Date();
-
-  const nigeriaTime = new Date(
-    now.toLocaleString("en-US", {
-      timeZone: "Africa/Lagos"
-    })
-  );
-
-  const year = nigeriaTime.getFullYear();
-  const month = String(nigeriaTime.getMonth() + 1).padStart(2, "0");
-  const day = String(nigeriaTime.getDate()).padStart(2, "0");
-
-  return `${year}-${month}-${day}`;
-}
-
-dateInput.value = getToday();
-
-updateSelectedDate();
-
-dateInput.addEventListener("change", updateSelectedDate);
-</script>
-
 </body>
 </html>
