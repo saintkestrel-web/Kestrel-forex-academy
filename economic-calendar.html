@@ -1,143 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07111f">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07111f">
+<title>Kestrel FX Economic Calendar</title>
 
-  <title>Kestrel FX | Economic Calendar</title>
+<style>
+* {
+  box-sizing: border-box;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+body {
+  margin: 0;
+  padding: 20px 12px;
+  background: #07111f;
+  color: white;
+  font-family: Arial, sans-serif;
+}
 
-    body {
-      margin: 0;
-      padding: 20px 14px;
-      background: #07111f;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-    }
+header, main, footer {
+  max-width: 1100px;
+  margin: auto;
+}
 
-    .header {
-      max-width: 1100px;
-      margin: 0 auto 22px;
-    }
+.brand {
+  color: #36d6ff;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
 
-    .brand {
-      color: #36d6ff;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 3px;
-    }
+h1 {
+  font-size: 26px;
+}
 
-    h1 {
-      font-size: 27px;
-      margin: 12px 0;
-    }
+p {
+  color: #a8b8ca;
+  line-height: 1.6;
+}
 
-    .description {
-      color: #a8b8ca;
-      font-size: 14px;
-      line-height: 1.7;
-    }
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
 
-    .events {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 18px;
-    }
+.events span {
+  background: #101f32;
+  border: 1px solid #263b52;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
 
-    .event {
-      background: #101f32;
-      border: 1px solid #24374d;
-      border-radius: 8px;
-      padding: 10px 13px;
-      font-size: 12px;
-      font-weight: bold;
-    }
+.calendar {
+  width: 100%;
+  min-height: 650px;
+  overflow: hidden;
+  border-radius: 10px;
+}
 
-    .calendar {
-      max-width: 1100px;
-      margin: 0 auto;
-      background: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      min-height: 650px;
-    }
+.tradingview-widget-container {
+  width: 100%;
+  min-height: 650px;
+}
 
-    .calendar iframe {
-      display: block;
-      width: 100%;
-      height: 750px;
-      border: none;
-    }
+.tradingview-widget-container__widget {
+  width: 100%;
+}
 
-    .notice {
-      max-width: 1100px;
-      margin: 18px auto;
-      color: #9eafc2;
-      font-size: 12px;
-      line-height: 1.7;
-    }
+.tradingview-widget-copyright {
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+}
 
-    .back {
-      display: inline-block;
-      margin-top: 18px;
-      color: #36d6ff;
-      text-decoration: none;
-      font-size: 14px;
-    }
-  </style>
+.tradingview-widget-copyright a {
+  color: #36d6ff;
+}
+
+.back {
+  display: inline-block;
+  margin: 20px 0;
+  color: #36d6ff;
+  text-decoration: none;
+}
+</style>
 </head>
 
 <body>
 
-  <header class="header">
-    <div class="brand">KESTREL FX</div>
+<header>
+  <div class="brand">KESTREL FX</div>
+  <h1>🇺🇸 U.S. Economic Calendar</h1>
 
-    <h1>🇺🇸 Economic Calendar</h1>
+  <p>
+    Track important U.S. economic announcements that may
+    affect the U.S. dollar and Gold (XAU/USD).
+  </p>
 
-    <p class="description">
-      Track major U.S. economic releases that can move the
-      U.S. dollar and Gold (XAU/USD).
-    </p>
-
-    <div class="events">
-      <div class="event">🔴 CPI</div>
-      <div class="event">🟠 CORE CPI</div>
-      <div class="event">🔵 PPI</div>
-      <div class="event">🟣 FOMC</div>
-      <div class="event">🟢 NFP</div>
-    </div>
-  </header>
-
-  <main class="calendar">
-    <iframe
-      src="https://s.tradingview.com/embed-widget/events/?locale=en&colorTheme=dark&isTransparent=false&width=100%25&height=750&importanceFilter=-1%2C0%2C1&countryFilter=US"
-      title="U.S. Economic Calendar"
-      loading="lazy"
-      referrerpolicy="strict-origin-when-cross-origin">
-    </iframe>
-  </main>
-
-  <div class="notice">
-    <p>
-      <strong>Important:</strong> Event schedules and economic
-      figures are supplied by TradingView. Actual results appear
-      when released. Forecasts and previous figures may not be
-      available for every event.
-    </p>
-
-    <p>
-      Always verify high-impact announcements before trading.
-      Economic results do not guarantee a particular market direction.
-    </p>
-
-    <a class="back" href="index.html">← Back to Kestrel FX</a>
+  <div class="events">
+    <span>🔴 CPI</span>
+    <span>🟠 CORE CPI</span>
+    <span>🔵 PPI</span>
+    <span>🟣 FOMC</span>
+    <span>🟢 NFP</span>
   </div>
+</header>
+
+<main>
+  <div class="calendar">
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+
+      <div class="tradingview-widget-copyright">
+        <a href="https://www.tradingview.com/economic-calendar/"
+           target="_blank" rel="noopener">
+          Economic Calendar
+        </a>
+        by TradingView
+      </div>
+
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-events.js"
+        async>
+      {
+        "colorTheme": "dark",
+        "isTransparent": false,
+        "locale": "en",
+        "countryFilter": "us",
+        "importanceFilter": "0,1",
+        "width": "100%",
+        "height": "650"
+      }
+      </script>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>
+    Economic events and figures are supplied by TradingView.
+    Actual results appear after their release. Always verify
+    important announcements before trading.
+  </p>
+
+  <a class="back" href="index.html">← Back to Kestrel FX</a>
+</footer>
 
 </body>
 </html>
