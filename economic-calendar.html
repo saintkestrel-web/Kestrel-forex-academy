@@ -1,9 +1,12 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#07111f">
-<title>Kestrel FX | U.S. Economic Calendar</title><style>
+<title>Kestrel FX | Economic Calendar</title>
+
+<style>
 * {
   box-sizing: border-box;
 }
@@ -23,13 +26,14 @@ header, main, footer {
 
 .brand {
   color: #36d6ff;
+  font-size: 13px;
   font-weight: bold;
   letter-spacing: 3px;
-  font-size: 13px;
 }
 
 h1 {
   font-size: 25px;
+  margin-bottom: 10px;
 }
 
 .description {
@@ -37,14 +41,14 @@ h1 {
   line-height: 1.6;
 }
 
-.events {
+.news-list {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin: 20px 0;
 }
 
-.events span {
+.news-list span {
   background: #101f32;
   border: 1px solid #263b52;
   border-radius: 8px;
@@ -53,19 +57,27 @@ h1 {
   font-weight: bold;
 }
 
+.notice {
+  background: #101f32;
+  border-left: 3px solid #36d6ff;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 16px 0;
+  color: #c5d4e5;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
 .calendar {
   width: 100%;
   min-height: 650px;
   overflow: hidden;
+  border: 1px solid #263b52;
   border-radius: 10px;
   background: #101f32;
 }
 
-.tradingview-widget-container {
-  width: 100%;
-  min-height: 650px;
-}
-
+.tradingview-widget-container,
 .tradingview-widget-container__widget {
   width: 100%;
 }
@@ -82,66 +94,91 @@ h1 {
 }
 
 footer {
+  padding: 20px 0;
   color: #a8b8ca;
   font-size: 12px;
   line-height: 1.7;
-  padding-bottom: 25px;
 }
 
 .back {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 10px;
   text-decoration: none;
 }
-</style></head><body><header>
-  <div class="brand">KESTREL FX</div>  <h1>🇺🇸 U.S. Economic Calendar</h1>  <p class="description">
-    Track U.S. economic announcements that may affect
-    the dollar and Gold (XAU/USD).
-  </p>  <div class="events">
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">KESTREL FX</div>
+
+  <h1>🇺🇸 U.S. Economic Calendar</h1>
+
+  <p class="description">
+    Track major U.S. economic releases that may affect the
+    U.S. dollar and Gold (XAU/USD).
+  </p>
+
+  <div class="news-list">
     <span>🔴 CPI</span>
     <span>🟠 CORE CPI</span>
     <span>🔵 PPI</span>
     <span>🟣 FOMC</span>
     <span>🟢 NFP</span>
   </div>
-</header><main>
-  <div class="calendar"><div class="tradingview-widget-container">
 
-  <div class="tradingview-widget-container__widget"></div>
-
-  <div class="tradingview-widget-copyright">
-    <a href="https://www.tradingview.com/economic-calendar/"
-       target="_blank"
-       rel="noopener noreferrer">
-      Economic Calendar
-    </a>
-    by TradingView
+  <div class="notice">
+    <strong>Important for Gold traders</strong><br>
+    Compare Actual with Forecast and Previous when a report is released.
+    The difference can influence the dollar and gold, but the market's
+    reaction also depends on expectations and other economic factors.
   </div>
+</header>
 
-  <script
-    type="text/javascript"
-    src="https://s3.tradingview.com/external-embedding/embed-widget-events.js"
-    async>
-  {
-    "colorTheme": "dark",
-    "isTransparent": false,
-    "locale": "en",
-    "countryFilter": "us",
-    "importanceFilter": "-1,0,1",
-    "width": "100%",
-    "height": 650
-  }
-  </script>
+<main>
+  <div class="calendar">
 
-</div>
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+
+      <div class="tradingview-widget-copyright">
+        <a href="https://www.tradingview.com/economic-calendar/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Economic Calendar
+        </a>
+        by TradingView
+      </div>
+
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-events.js"
+        async>
+      {
+        "colorTheme": "dark",
+        "isTransparent": false,
+        "locale": "en",
+        "countryFilter": "us",
+        "importanceFilter": "-1,0,1",
+        "width": "100%",
+        "height": 650
+      }
+      </script>
+    </div>
 
   </div>
-</main><footer>
+</main>
+
+<footer>
   <p>
-    Event schedules and figures are provided by TradingView.
-    Actual figures appear after their release. Not every event
-    has the same level of market impact.
-  </p><a class="back" href="index.html">← Back to Kestrel FX</a>
+    Calendar data is provided by TradingView.
+    Actual figures appear when the relevant reports are released.
+    Check the calendar's time-zone settings to confirm Nigerian time.
+  </p>
 
-</footer></body>
+  <a class="back" href="index.html">← Back to Kestrel FX</a>
+</footer>
+
+</body>
 </html>
